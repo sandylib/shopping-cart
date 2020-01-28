@@ -3,7 +3,8 @@ const Checkout = require('./checkout');
 
 const test = new Checkout();
 
-console.log(`Add products to the shopping cart`);
+console.log(`-------------------------------------------`)
+console.log(`Step 1: Add products to the shopping cart`);
 test.addProduct({ name: 'Dove_Soap', price : 39.99});
 
 test.scan('Dove_Soap');
@@ -14,15 +15,17 @@ test.scan('Dove_Soap');
 
 
 console.log(`the shopping cart’s total price should equal ${test.total()}`)
-
-console.log(`Add additional products of the same type to the shopping cart`)
+console.log(`---------------------------------------------------------------`)
+console.log(`Step 2:Add additional products of the same type to the shopping cart`)
 test.scan('Dove_Soap');
 test.scan('Dove_Soap');
 test.scan('Dove_Soap');
 
 console.log(`the shopping cart’s total price should equal ${test.total()}`)
 
-console.log(`Calculate the tax rate of the shopping cart with multiple items`)
+console.log(`---------------------------------------------------------------`)
+
+console.log(`Step 3:Calculate the tax rate of the shopping cart with multiple items`)
 
 const test2 = new Checkout();
 test2.addProduct({ name: 'Dove_Soap', price : 39.99});
